@@ -1,0 +1,228 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg,#0f172a,#1e293b,#334155);
+
+  font-family: Arial, sans-serif;
+
+  color: white;
+}
+
+.container{
+  width: 100%;
+  max-width: 1100px;
+
+  display: flex;
+  justify-content: center;
+
+  gap: 40px;
+
+  flex-wrap: wrap;
+
+  padding: 40px;
+}
+
+/* CARD */
+
+.card{
+  width: 320px;
+
+  background: #ffffff10;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  backdrop-filter: blur(10px);
+
+  transition: all 0.4s ease;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+  transform: translateY(-10px);
+}
+
+/* IMAGE ZOOM EFFECT */
+
+.image-box{
+  overflow: hidden;
+}
+
+.image-box img{
+  width: 100%;
+
+  display: block;
+
+  transition: transform 0.5s ease;
+}
+
+.card:hover img{
+  transform: scale(1.1);
+}
+
+/* CONTENT */
+
+.content{
+  padding: 25px;
+}
+
+.content h2{
+  margin-bottom: 10px;
+
+  font-size: 24px;
+}
+
+.content p{
+  color: #d1d5db;
+
+  line-height: 1.6;
+
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+
+.btn-group{
+  display: flex;
+
+  gap: 15px;
+}
+
+.btn{
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  transition: all 0.3s ease;
+}
+
+/* PRIMARY BUTTON */
+
+.primary-btn{
+  background: #38bdf8;
+
+  color: black;
+}
+
+.primary-btn:hover{
+  transform: scale(1.08) translateY(-3px);
+
+  background: #7dd3fc;
+
+  box-shadow: 0 10px 20px rgba(56,189,248,0.4);
+}
+
+.primary-btn:active{
+  transform: scale(0.95);
+}
+
+/* SECONDARY BUTTON */
+
+.secondary-btn{
+  background: transparent;
+
+  border: 2px solid white;
+
+  color: white;
+}
+
+.secondary-btn:hover{
+  background: white;
+
+  color: black;
+
+  transform: translateY(-3px);
+}
+
+.secondary-btn:active{
+  transform: scale(0.95);
+}
+
+/* CTA SECTION */
+
+.cta-section{
+  width: 320px;
+
+  background: linear-gradient(135deg,#7c3aed,#a855f7);
+
+  border-radius: 20px;
+
+  padding: 40px 30px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.cta-section h1{
+  margin-bottom: 15px;
+
+  font-size: 32px;
+}
+
+.cta-section p{
+  color: #f3e8ff;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+/* CTA BUTTON */
+
+.cta-btn{
+  padding: 15px 28px;
+
+  border: none;
+  border-radius: 50px;
+
+  background: white;
+
+  color: #7c3aed;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover{
+   background-color: #ec4899; /* Pink accent */
+      color: white;
+      padding: 16px 40px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+    animation: pulseAnimation 2s infinite;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+  transform: scale(1.08) translateY(-5px);
+
+  box-shadow: 0 10px 20px rgba(255,255,255,0.3);
+}
+
+.cta-btn:active{
+  transform: scale(0.94);
+}
